@@ -30,7 +30,7 @@ void printArr(int arr[] , int n)
 }
 int main()
 {
-  int arr[]= {1,2,3,4,5};
+  int arr[]= {1,2,3,4,5};   
   int n = sizeof(arr)/sizeof(int);
   printArr(arr,n);
 }
