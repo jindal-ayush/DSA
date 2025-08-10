@@ -7,12 +7,12 @@ void toUpparCase(char word[] , int n )
    for(int i =0; i<n; i++)
    {
     char ch = word[i];
-      if(word[i]>='A' && word[i]<='Z')
+      if(word[i]>='a' && word[i]<='z')
       {
         continue;
       }
       else{
-        word[i] = ch-'a'+'A';
+        word[i] = ch-'A'+'a';
       }
    }
 
