@@ -13,6 +13,6 @@ fibonacci(int n)
 int main()
 {
     
-   cout<<fibonacci(3);
+   cout<<fibonacci(4);
     
 }
