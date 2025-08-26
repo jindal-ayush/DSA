@@ -1,5 +1,5 @@
-#include<iostream>
-#include<climits>
+#include <iostream>
+#include <climits>
 using namespace std;
 
 // int main()
@@ -20,13 +20,12 @@ using namespace std;
 //             }
 //             cout<<currSum<<",";
 //             maxSum = max(currSum , maxSum);
-//         }   
+//         }
 //         cout<<endl;
 //     }
 //     cout<<"maximum subarray sum = "<<maxSum<<endl;
 //     return 0;
 // }
-
 
 //******************** time complexity O(n square)****************************************** */
 // int main()
@@ -42,30 +41,28 @@ using namespace std;
 //         {
 //            currSum += arr[j];
 //             maxSum = max(currSum , maxSum);
-//         }   
+//         }
 //     }
 //     cout<<"maximum subarray sum = "<<maxSum<<endl;
 //     return 0;
 // }
 
-
 //************************Kadanes algorithm ****************************** */
 int main()
 {
-    int maxSum = INT_MIN;
-    int arr[] = {-2,-3, -6,-5,-4,-2};
-    int n = sizeof(arr)/sizeof(int);
-      int currSum= 0;    
-    for(int i =0; i<n; i++)
+  int maxSum = INT_MIN;
+  int arr[] = {-2, -3, -6, -5, -4, -2};
+  int n = sizeof(arr) / sizeof(int);
+  int currSum = 0;
+  for (int i = 0; i < n; i++)
+  {
+    currSum += arr[i];
+    maxSum = max(currSum, maxSum);
+    if (currSum < 0)
     {
-
-        currSum += arr[i];
-       maxSum =  max(currSum , maxSum);
-          if(currSum <0)
-         {
-            currSum =0;
-         }  
+      currSum = 0;
     }
-    cout<<"maximum subarray sum = "<<maxSum<<endl;
-    return 0;
+  }
+  cout << "maximum subarray sum = " << maxSum << endl;
+  return 0;
 }
