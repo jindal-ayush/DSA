@@ -18,14 +18,14 @@ void merge(int arr[], int start, int mid, int end)
             temp.push_back(arr[j++]);
         }
     }
-    while (i <= mid)
-    {
-        temp.push_back(arr[i++]);
-    }
-    while (j <= end)
-    {
-        temp.push_back(arr[j++]);
-    }
+    // while (i <= mid)
+    // {
+    //     temp.push_back(arr[i++]);
+    // }
+    // while (j <= end)
+    // {
+    //     temp.push_back(arr[j++]);
+    // }
     for (int i = start, x = 0; i <= end; i++)
     {
         arr[i] = temp[x++];
@@ -33,7 +33,7 @@ void merge(int arr[], int start, int mid, int end)
 }
 void mergeSort(int arr[], int start, int end)
 {
-    while (start >= end)
+    if (start >= end)
     {
         return;
     }

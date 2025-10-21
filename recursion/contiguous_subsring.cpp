@@ -17,7 +17,7 @@ int main()
                 count++;
                  string sub = str.substr(i, j-i+1);
                 reverse(sub.begin(), sub.end());
-                cout << sub << endl;
+                cout << sub << endl;    
             }
         }
     }
