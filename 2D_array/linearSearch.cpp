@@ -2,6 +2,7 @@
 using namespace std;
 
 bool linearMatrix(int matrix[][3] , int rows, int cols , int target) {
+  
     for(int i =0; i<rows; i++){
       for(int j=0; j<cols; j++){
           if(matrix[i][j]== target){
@@ -20,3 +21,4 @@ int main() {
     cout<<linearMatrix(matrix,  rows,  cols, target);
     return 0;
 }
+    
